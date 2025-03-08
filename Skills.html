@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills and Expertise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom gradient animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #1f2937, #111827, #1f2937);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white font-sans">
+    <!-- Skills and Expertise Section -->
+    <div class="container mx-auto px-6 py-12 ">
+        <!-- Section Title -->
+        <h2 class="text-6xl font-bold text-center mb-12 pb-12 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-purple-500 ">
+            Skills and Expertise
+        </h2>
+
+        <!-- Technical Skills -->
+        <div class="mb-12">
+            <h3 class="text-3xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500 border-b-2 border-red-300 pb-1">
+                Technical Skills
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Card 1: HTML5 -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-html5 text-6xl text-red-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">HTML5</h4>
+                    <p class="text-gray-300 text-center">Advanced</p>
+                </div>
+                <!-- Skill Card 2: CSS3 -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-css3-alt text-6xl text-blue-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">CSS3</h4>
+                    <p class="text-gray-300 text-center">Advanced</p>
+                </div>
+                <!-- Skill Card 3: JavaScript -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-js-square text-6xl text-yellow-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">JavaScript</h4>
+                    <p class="text-gray-300 text-center">Intermediate</p>
+                </div>
+                <!-- Skill Card 4: React -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-react text-6xl text-blue-400 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">React</h4>
+                    <p class="text-gray-300 text-center">Intermediate</p>
+                </div>
+                <!-- Skill Card 5: Figma -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-figma text-6xl text-purple-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Figma</h4>
+                    <p class="text-gray-300 text-center">Advanced</p>
+                </div>
+                <!-- Skill Card 6: Java -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-java text-6xl text-orange-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Java</h4>
+                    <p class="text-gray-300 text-center">Advanced</p>
+                </div>
+                <!-- Skill Card 7: C++ -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-code text-6xl text-blue-600 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">C++</h4>
+                    <p class="text-gray-300 text-center">Intermediate</p>
+                </div>
+                <!-- Skill Card 8: C -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-copyright text-6xl text-blue-400 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">C</h4>
+                    <p class="text-gray-300 text-center">Intermediate</p>
+                </div>
+                <!-- Skill Card 9: Python -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fab fa-python text-6xl text-yellow-400 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Python</h4>
+                    <p class="text-gray-300 text-center">Advanced</p>
+                </div>
+                <!-- Skill Card 10: DSA -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-project-diagram text-6xl text-green-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">DSA</h4>
+                    <p class="text-gray-300 text-center">Intermediate</p>
+                </div>
+                <!-- Skill Card 11: DBMS -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-database text-6xl text-teal-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">DBMS</h4>
+                    <p class="text-gray-300 text-center">Intermediate</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div>
+            <h3 class="text-3xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500  border-b-2 border-red-300 pb-1">
+                Soft Skills
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Card 1: Problem-Solving -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-lightbulb text-6xl text-yellow-400 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Problem-Solving</h4>
+                    <p class="text-gray-300 text-center">Creative and analytical thinker.</p>
+                </div>
+                <!-- Skill Card 2: Teamwork -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-users text-6xl text-green-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Teamwork</h4>
+                    <p class="text-gray-300 text-center">Collaborative and supportive team player.</p>
+                </div>
+                <!-- Skill Card 3: Communication -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-comments text-6xl text-blue-400 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Communication</h4>
+                    <p class="text-gray-300 text-center">Clear and effective communicator.</p>
+                </div>
+                <!-- Skill Card 4: Time Management -->
+                <div class="skill-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-clock text-6xl text-purple-500 mb-4 mx-auto"></i>
+                    <h4 class="text-xl font-bold mb-2 text-center">Time Management</h4>
+                    <p class="text-gray-300 text-center">Efficient and deadline-oriented.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

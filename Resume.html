@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom gradient animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #1f2937, #111827, #1f2937);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen gradient-bg p-6">
+    <div class="w-full max-w-3xl bg-gray-800 shadow-2xl rounded-3xl p-8 transform hover:scale-105 transition-transform duration-300 blog-card">
+        <h1 class="text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500 pb-2">My Resume</h1>
+        <p class="text-center text-gray-300 mb-6 text-lg">
+            Download my resume to learn more about my experience and skills.
+        </p>
+        
+        <div class="overflow-hidden rounded-lg shadow-lg border-4 border-gray-600 hover:border-blue-400 transition-all duration-300">
+            <iframe src="images/cv.pdf" class="w-full h-96 bg-gray-700"></iframe>
+        </div>
+        
+        <div class="flex justify-center mt-6">
+            <a href="images/cv.pdf" download>
+                <button class="flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transform hover:scale-110 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-8m0 8l4-4m-4 4l-4-4m8 8H4m16 0h-4" />
+                    </svg>
+                    Download Resume
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+

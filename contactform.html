@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom gradient animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #1f2937, #111827, #1f2937);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        .contact-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon-hover {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .icon-hover:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white font-sans">
+    <!-- Contact Form Section -->
+    <div class="container mx-auto px-6 py-12">
+        <!-- Section Title -->
+        <h2 class="text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500">
+            Contact Me
+        </h2>
+
+        <!-- Contact Form -->
+        <div class="max-w-2xl mx-auto">
+            <div class="contact-card bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <form id="contact-form">
+                    <!-- Name Field -->
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name" required>
+                    </div>
+                    <!-- Email Field -->
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email" required>
+                    </div>
+                    <!-- Message Field -->
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Validate form fields
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Simulate form submission
+            console.log('Form submitted:', { name, email, message });
+            alert('Thank you for your message! I will get back to you soon.');
+
+            // Clear form fields
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+</body>
+</html>

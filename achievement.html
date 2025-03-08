@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom gradient animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #1f2937, #111827, #1f2937);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        .achievement-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Full-screen image styles */
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fullscreen-overlay.active {
+            display: flex;
+        }
+
+        .fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white font-sans">
+    <!-- Achievements Section -->
+    <div class="container mx-auto px-6 py-12">
+        <!-- Section Title -->
+        <h2 class="text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500">
+            Achievements
+        </h2>
+
+        <!-- Certificates Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Certificate 1 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/IBM (2).jpg" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/IBM (2).jpg')">
+                <h4 class="text-xl font-bold mb-2">IBM Certified</h4>
+                <p class="text-gray-300">Introduction to Hardware and Operating Systems
+                    an authorized by IBM and offered Coursera</p>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/GOOGLE.jpg" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/GOOGLE.jpg')">
+                <h4 class="text-xl font-bold mb-2">Google Certified</h4>
+                <p class="text-gray-300">The Bits and Bytes of Computer Networking
+                    art non-rredil authorized by offered</p>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/Hack_Tone_page-0001.jpg" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/Hack_Tone_page-0001.jpg')">
+                <h4 class="text-xl font-bold mb-2">HackTone</h4>
+                <p class="text-gray-300">for participating in the "Code-A-Haunt" 24-hour hackathon organized by CodingBIocks
+                    LPU, Lovely Professional university (LPLJ) on 29-02-24 to 01-03-24, showcasing
+                    exceptional skills in coding and problem-solving.</p>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/Neo_cab_cerf (1)_page-0001.jpg" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/Neo_cab_cerf (1)_page-0001.jpg')">
+                <h4 class="text-xl font-bold mb-2">Neo Colab Certification of  C</h4>
+                <p class="text-gray-300">completed the online course on <b class="font-bold text-lg ">computer Programming</b> of
+                    72 hours on iamneo platform.</p>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/cpp.jpg" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/cpp.jpg')">
+                <h4 class="text-xl font-bold mb-2">Neo Colab Certification of CPP</h4>
+                <p class="text-gray-300">Completed the online course on
+                    Object Oriented Programming of 72 hours on iamneo platform.</p>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/dsa.jpg" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/dsa.jpg')">
+                <h4 class="text-xl font-bold mb-2">Neo Colab Certification of DSA</h4>
+                <p class="text-gray-300">Completed the online course on
+                    Data Structures and Algorithm of 72 hours on iamneo platform.</p>
+            </div>
+            <!-- Certificate 7 -->
+            <div class="achievement-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <img src="images/Facebook Marketing and Advertising.png" alt="IBM Certificate" class="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer" onclick="openFullscreen('images/Facebook Marketing and Advertising.png')">
+                <h4 class="text-xl font-bold mb-2">Facebook Marketing and Advertising</h4>
+                <p class="text-gray-300">Completion of online course:
+                    Facebook Marketing and Advertising</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full-screen image overlay -->
+    <div class="fullscreen-overlay" onclick="closeFullscreen()">
+        <img id="fullscreen-img" src="" alt="Fullscreen Image" class="fullscreen-image">
+    </div>
+
+    <!-- JavaScript for Full-screen Image -->
+    <script>
+        // Open full-screen image
+        function openFullscreen(imageSrc) {
+            const overlay = document.querySelector('.fullscreen-overlay');
+            const fullscreenImg = document.getElementById('fullscreen-img');
+            fullscreenImg.src = imageSrc;
+            overlay.classList.add('active');
+        }
+
+        // Close full-screen image
+        function closeFullscreen() {
+            const overlay = document.querySelector('.fullscreen-overlay');
+            overlay.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
